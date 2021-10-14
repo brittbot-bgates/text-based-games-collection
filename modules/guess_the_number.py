@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from modules.clear_screen import clear_screen
 from modules.sleep_print import sleep_print
 from sys import exit
@@ -37,13 +38,9 @@ def guess_the_number():
     print("\nRules:\nGuess the number (1 - 500) within 5 tries.")
     print("*" * 40)
 
-    # Number of tries
     tries = 5
-
-    # Determine the random number
     random_number = random.randint(1, 500)
 
-    # Determine the player's choice via standard input
     try:
         player_guess = int(input("\nTries Left = {}\nWhat's your guess?\nEnter it here: ".format(tries)))
         while tries > 1:
