@@ -10,6 +10,7 @@ from modules.clear_screen import clear_screen
 from sys import exit
 from modules.rock_paper_scissors import rock_paper_scissors
 from modules.guess_the_number import guess_the_number
+from modules.word_guess import word_guess
 
 
 def main():
@@ -20,7 +21,7 @@ def main():
     print("*" * 40)
     print(" -- Text Games Collection -- ")
     print("\nEnter \"0\" to quit.")
-    print("\nGames:\n1) Rock, Paper, Scissors\n2) Guess The Number")
+    print("\nGames:\n1) Rock, Paper, Scissors\n2) Guess The Number\n3) Word Guess")
     print("*" * 40)
 
     game_choice = int(input("Your Choice: "))
@@ -32,6 +33,8 @@ def main():
         rock_paper_scissors()
     elif game_choice == 2:
         guess_the_number()
+    elif game_choice == 3:
+        word_guess()
     else:
         print("Invalid choice.")
         sleep_print()
