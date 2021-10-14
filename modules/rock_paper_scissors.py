@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from modules.clear_screen import clear_screen
 from modules.sleep_print import sleep_print
 from sys import exit
@@ -28,7 +29,7 @@ def rock_paper_scissors():
     """
     Takes an `int` from the player to determine their choice and compares it to the computer's choice to determine
     the winner.
-    :return: The winner of the match.
+    :return: A string showing the winner of the match.
     """
     clear_screen()
     print("*" * 40)
@@ -50,7 +51,6 @@ def rock_paper_scissors():
     else:
         computer_choice = scissors
 
-    # Determine the player's choice via standard input
     try:
         player_choice = int(input("\nWhat's your choice?\n1) Rock\n2) Paper\n3) Scissors\nEnter choice here: "))
         if player_choice == 1:
