@@ -8,3 +8,4 @@ This also gives me the chance to solidify using various techniques like receivin
 Note: This is not a final list as I'm adding more
 - Rock, Paper, Scissors
 - Guess The Number
+- Word Guess
