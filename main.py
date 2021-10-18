@@ -5,9 +5,9 @@ Creator: Brittany Gates (https://github.com/brittbot-bgates)
 About: A collection of text-based games:
 - Rock, Paper, Scissors
 """
+from sys import exit
 from modules.sleep_print import sleep_print
 from modules.clear_screen import clear_screen
-from sys import exit
 from modules.rock_paper_scissors import rock_paper_scissors
 from modules.guess_the_number import guess_the_number
 from modules.word_guess import word_guess
