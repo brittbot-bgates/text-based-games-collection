@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
+from sys import exit
+from random import choice
 from modules.clear_screen import clear_screen
 from modules.sleep_print import sleep_print
-from sys import exit
 from modules.words import word_dict
-import random
 
 
-def play_again():
+def play_again() -> None:
     """
-    Takes an `int` and asks the player to play the game again.
-    :return: The player plays the game again or goes back to the menu.
+    Takes an `int` and asks the player to play the game again. The player plays the game again or exits the program.
+    :return: None
     """
     clear_screen()
     play_game_again = int(input("Do you want to play again?\n1) Yes\n2) No\nEnter choice here: "))
@@ -26,11 +26,10 @@ def play_again():
         play_again()
 
 
-def word_guess():
+def word_guess() -> None:
     """
     Takes a `str` from the player and compares it to randomly chosen word.
-    the winner.
-    :return: A string showing if the player guesses the word correctly.
+    :return: None
     """
     clear_screen()
     print("*" * 40)
@@ -43,7 +42,7 @@ def word_guess():
 
     # Convert the dictionary into a list to choose a random entry
     dict_list = list(word_dict.items())
-    random_pair = random.choice(dict_list)
+    random_pair = choice(dict_list)
     word = random_pair[0]
     hint = ""
 

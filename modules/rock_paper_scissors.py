@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
+from sys import exit
+from random import randint
 from modules.clear_screen import clear_screen
 from modules.sleep_print import sleep_print
-from sys import exit
-import random
 
 
-def play_again():
+def play_again() -> None:
     """
-    Takes an `int` and asks the player to play the game again.
-    :return: The player plays the game again or goes back to the menu.
+    Takes an `int` and asks the player to play the game again. The player plays the game again or exits the program.
+    :return: None
     """
     clear_screen()
     play_game_again = int(input("Do you want to play again?\n1) Yes\n2) No\nEnter choice here: "))
@@ -25,11 +25,11 @@ def play_again():
         play_again()
 
 
-def rock_paper_scissors():
+def rock_paper_scissors() -> None:
     """
     Takes an `int` from the player to determine their choice and compares it to the computer's choice to determine
     the winner.
-    :return: A string showing the winner of the match.
+    :return: None
     """
     clear_screen()
     print("*" * 40)
@@ -42,7 +42,7 @@ def rock_paper_scissors():
     scissors = 3
 
     # Determine the computer's choice via random number
-    random_number = random.randint(1, 3)
+    random_number = randint(1, 3)
     computer_choice = ""
     if random_number == rock:
         computer_choice = rock
